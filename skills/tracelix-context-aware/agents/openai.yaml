@@ -1,0 +1,19 @@
+interface:
+  display_name: "Tracelix Context Awareness"
+  short_description: "Use context graph before and after code changes"
+  default_prompt: "Use $tracelix-context-aware to make a code change with context graph impact analysis and KB ingestion."
+
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "get_context_readiness"
+      description: "Validate the connection and configuration readiness before starting the workflow."
+    - type: "mcp"
+      value: "get_context_ontology"
+      description: "Read the bound context's active ontology before mapping entities and generating KB articles."
+    - type: "mcp"
+      value: "ask_context_graph"
+      description: "Query the project context graph for components affected by a planned code change."
+    - type: "mcp"
+      value: "submit_context_knowledge"
+      description: "Submit updated .tracelix/kb/ knowledge articles to the context ingestion pipeline."

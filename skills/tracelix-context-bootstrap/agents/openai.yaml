@@ -1,0 +1,22 @@
+interface:
+  display_name: "Tracelix Context Bootstrap"
+  short_description: "Map connected capabilities, rules, and change context"
+  default_prompt: "Use $tracelix-context-bootstrap to build connected knowledge of capabilities, behavioral rules, and functional/service dependencies for coding-agent context, retain exhaustive API/messaging accounting and source evidence, and track KB ingestion without graph usefulness verification."
+
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "get_context_readiness"
+      description: "Validate the connection and configuration readiness before starting the workflow."
+    - type: "mcp"
+      value: "get_context_ontology"
+      description: "Read the bound context's active ontology before mapping entities and generating KB articles."
+    - type: "mcp"
+      value: "submit_context_knowledge"
+      description: "Submit generated repository KB articles to the bound Tracelix context."
+    - type: "mcp"
+      value: "get_context_ingestion_run"
+      description: "Track accepted ingestion runs and preserve their outcomes."
+    - type: "mcp"
+      value: "list_context_ingestion_runs"
+      description: "Inspect ingestion history and track existing submissions."
