@@ -1,7 +1,9 @@
 # Tracelix Context Bootstrap
 
-Discover repository capabilities, rules, and dependencies; generate and submit
-initial connected knowledge. See [SKILL.md](SKILL.md) for the workflow and
+Discover repository capabilities, rules, dependencies, and representative regression
+scenarios; generate and submit initial connected knowledge with Test Case entities
+and verification links. Report test-coverage gaps separately from API coverage
+and ingestion outcomes. See [SKILL.md](SKILL.md) for the workflow and
 [ingestion reference](references/ingestion.md) for tool requirements. This package
 works independently of the context-aware skill.
 
@@ -70,6 +72,8 @@ Use the tracelix-context-bootstrap skill to build initial knowledge for this rep
 ```
 
 Artifacts and submission history are written under the target project's `.tracelix/`.
+The [test-coverage reference](references/test-coverage.md) defines scenario
+inspection, publication, and gap reporting; bootstrap does not execute tests.
 
 Successful ingestion is the endpoint; bootstrap does not query the graph or
 verify retrieval usefulness.

@@ -64,8 +64,10 @@ For each operation or binding, inspect and record:
    response/acknowledgement behavior. Include authorization, validation, failure,
    retry, and idempotency branches when they materially affect the workflow.
 4. The files and stable symbols supporting those facts, plus representative
-   inspected test assertions when available. Missing tests do not erase an
-   otherwise traceable contract.
+   inspected test assertions when available. Follow [test-coverage.md](test-coverage.md)
+   to record and publish those scenarios, reusing contract/capability keys.
+   Missing tests do not erase an otherwise traceable contract; record the test
+   gap independently rather than silently omitting it.
 5. Its article path and exact entity/relationship records once documented. Select
    ontology terms from MCP; do not invent types or links to close a coverage gap.
 

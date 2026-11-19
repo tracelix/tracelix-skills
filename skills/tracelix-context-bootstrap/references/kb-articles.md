@@ -135,11 +135,19 @@ articles or skill instructions does not repair the existing graph automatically.
 - Shared rules: meaningful configuration, lifecycle, interpretation, and service
   constraints connecting separately implemented behavior. Do not turn descriptions
   of current behavior into normative requirements without supporting evidence.
+- Regression scenarios: inspected Test Case entities and verification relationships
+  under [test-coverage.md](test-coverage.md), describing the actual expectation,
+  fixture/mock boundary and supported target. Test citations alone do not publish
+  a scenario or verification link. Reconcile canonical IDs and evidence with the
+  test ledger; missing entities, links or inspected assertions remain explicit gaps.
 
 Use [contract-mapping.md](contract-mapping.md) and
 [context-mapping.md](context-mapping.md) to reconcile both inventories with
 these article assertions. The complete operational worklists belong in the local
 ledger; do not duplicate them as ingested supplementary inventories.
+Reconcile representative test publication separately; an API or semantic coverage
+check cannot close its gaps. Missing live Test Case types or permitted verification
+endpoints leave affected publication pending, without substituting generic links.
 
 Use entity names consistently across documents without decorative quotes. Disambiguate generic names with
 their owner or domain, such as "Document ingestion run" instead of "Run". Preserve

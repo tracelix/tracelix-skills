@@ -1,6 +1,6 @@
 ---
 name: tracelix-context-bootstrap
-description: "Bootstrap connected product knowledge from a local checkout for coding-agent context and impact discovery. Map capabilities, behavioral rules, and functional/service dependencies with exhaustive API/messaging accounting and source evidence; generate KB articles and track native MCP ingestion. Use for repository onboarding or initial KB generation; ordinary code changes use the development workflow."
+description: "Bootstrap connected product knowledge from a local checkout for coding-agent context and impact discovery. Map capabilities, behavioral rules, dependencies, and representative regression tests with explicit coverage gaps and exhaustive API/messaging accounting; generate KB articles and track native MCP ingestion. Use for repository onboarding or initial KB generation; ordinary code changes use the development workflow."
 ---
 
 # Tracelix Context Bootstrap
@@ -30,6 +30,9 @@ disposition; article size or perceived importance must not silently remove
 endpoints from coverage. Context discovery is also required, including behavior
 not reachable from a contract. Exhaustive contract accounting and implementation
 provenance support semantic knowledge coverage but do not establish it.
+Inspect representative regression scenarios for mapped capabilities and publish
+source-grounded Test Case entities and verification links. Account for test
+coverage and gaps independently of contracts, semantic findings, and ingestion.
 
 Use native Tracelix MCP tools. Read [references/ingestion.md](references/ingestion.md)
 for tool contracts, readiness limitations, and submission tracking. Read
@@ -72,10 +75,16 @@ for tool contracts, readiness limitations, and submission tracking. Read
   registrations, messaging bindings, and deployment configuration. Inventory all
   in-scope API operations and queue/topic producer and consumer bindings before
   tracing implementations. Documentation is optional input.
+- Read [references/test-coverage.md](references/test-coverage.md) for test discovery,
+  scenario inspection and publication accounting. Locate test roots through
+  manifests, runner configuration, CI and targeted searches. For each mapped
+  capability, inspect representative setup, actions and assertions with relevant
+  fixtures/mocks, or record an explicit missing, uninspected or blocked area.
 - Respect ignore rules. Exclude credentials, environment secrets, dependency
   directories, generated implementation bodies, build output, binary assets, and
   bootstrap output. Read generated contract declarations only when needed to
-  reconcile the actual interface surface. Keep representative tests as evidence.
+  reconcile the actual interface surface. Inspect tests under the test-coverage
+  reference; filenames alone are not scenario evidence.
   Do not execute repository code or install an indexing service just to explore it.
 - Reconcile declared APIs with mounted routes and message schemas with actual
   publishers, subscriptions, and worker configuration. Keep unmatched declarations,
@@ -128,6 +137,11 @@ for tool contracts, readiness limitations, and submission tracking. Read
   edge type ID, local endpoint IDs, interaction description and source references.
   Keep code citations separate from descriptions. Include verified implementation-file
   relationships where required by the catalog, not merely evidence paths.
+- Include inspected regression scenarios as Test Case entities and directed
+  verification relationships using the live ontology. Describe the expectation
+  checked and cite test assertions plus inspected target evidence. Reuse target
+  identities; keep both endpoints in the payload. Record unsupported types/links
+  as gaps rather than replacing them with generic relationships or invented entities.
 - Resolve vague descriptions and missing participants through inspection. Omit
   unsupported assertions and record gaps; do not invent requirements or intermediate
   entities. Preserve unrelated maintained artifacts; leave incompatible retained
@@ -141,6 +155,10 @@ for tool contracts, readiness limitations, and submission tracking. Read
 - Reconcile semantic findings and every inventoried contract with the JSON assertion
   IDs and paired artifact paths. File provenance and endpoint counts do not establish
   semantic coverage. Complete missing tracing when possible; report real gaps.
+- Reconcile mapped capabilities with test assessments and inspected scenarios with
+  canonical Test Case entities, verification links and evidence under the
+  test-coverage reference. Missing legacy fields are unassessed; successful runs
+  do not close test-discovery or publication gaps. Explain zero test/link counts.
 - Check active classifications, directed endpoints, descriptions, source anchors and
   required implementation-file relationships. Apply the semantic coverage check in
   the article reference. Preserve omissions separately in `omitted_scope`.
@@ -158,7 +176,10 @@ for tool contracts, readiness limitations, and submission tracking. Read
 - Record succeeded, partially_succeeded, failed, terminated and any returned budget
   outcome separately. Preserve pending IDs when tracking ends; do not automatically
   restart failed runs or resubmit to simulate resume.
-- Finish with paired artifact paths, inspected/omitted boundaries, semantic and
-  contract coverage counts/gaps, readiness unknowns, run outcomes and pending work.
+- Finish with paired artifact paths and inspected/omitted boundaries. Report
+  semantic coverage, API/messaging coverage, representative test-coverage counts
+  and gaps, readiness unknowns, and ingestion outcomes separately. Include test
+  assessments, unique scenarios inspected/documented, verification assertion counts
+  and uninspected/missing/blocked areas; do not imply that tests were executed.
   Do not claim all implicit dependencies, retrieval usefulness or development readiness.
   Usefulness verification was not performed; successful ingestion is the endpoint.

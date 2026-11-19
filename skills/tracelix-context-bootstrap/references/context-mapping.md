@@ -6,6 +6,10 @@ overlook. Connect capabilities to their realization and constraints; files and
 symbols provide evidence and inspection anchors. The graph enriches current code
 inspection; it is not a replacement for it or a comprehensive call graph. Retain exhaustive
 contract accounting under [contract-mapping.md](contract-mapping.md) independently.
+Use [test-coverage.md](test-coverage.md) to inspect representative regression
+scenarios for each mapped capability and publish their verification links.
+Tests missing or left uninspected remain explicit gaps, even for capabilities
+with complete implementation and contract tracing.
 
 ## Establish Capabilities and Shared Rules
 
@@ -177,6 +181,9 @@ new semantic coverage has not been assessed; preserve earlier records and status
 without treating their old `documented` status as proof of the added coverage.
 
 Reconcile discovery roots with findings, then findings with article assertions.
+Reconcile capability keys with test-discovery assessments and selected scenarios;
+capabilities without communication contracts still need this assessment. Semantic
+documentation status alone does not establish test inspection or publication.
 Continue inspection when source is available; record concrete source, registration,
 or ontology blockers otherwise. On repetition, refresh affected evidence, reconcile
 removed findings, and preserve earlier provenance separately; new submissions do

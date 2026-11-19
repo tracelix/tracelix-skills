@@ -1,7 +1,7 @@
 interface:
   display_name: "Tracelix Context Bootstrap"
-  short_description: "Map connected capabilities, rules, and change context"
-  default_prompt: "Use $tracelix-context-bootstrap to build connected knowledge of capabilities, behavioral rules, and functional/service dependencies for coding-agent context, retain exhaustive API/messaging accounting and source evidence, and track KB ingestion without graph usefulness verification."
+  short_description: "Map capabilities, rules, dependencies, and regression tests"
+  default_prompt: "Use $tracelix-context-bootstrap to build connected knowledge of capabilities, rules, dependencies, and representative regression scenarios with Test Case entities and verification links, retain exhaustive API/messaging accounting and explicit test-coverage gaps, and track KB ingestion without graph usefulness verification."
 
 dependencies:
   tools:

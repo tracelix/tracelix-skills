@@ -28,7 +28,8 @@ document/run was admitted. The server also checks revision identity before appli
 ## Ledger and Repeated Invocations
 
 Maintain `.tracelix/bootstrap/manifest.json`, preserving existing version-1 discovery
-records, contracts, context items, gaps, article mappings and attempt history.
+records, contracts, context items, test discovery/cases, gaps, article mappings
+and attempt history.
 Keep operational notes outside ingested knowledge. Add to each article entry:
 
 ```json
@@ -51,8 +52,10 @@ At ledger and attempt levels retain connection/context identity, commit SHA and
 dirty state, ontology identity, input format/schema, canonical/evidence hashes,
 document/run IDs, latest status/timestamps and errors. Historical entries without
 these fields remain readable, but cannot establish a matching structured success.
-Preserve semantic discovery and contract inventories independently of run status;
-see contract-mapping.md and context-mapping.md for coverage reconciliation.
+Preserve semantic discovery, contract inventories and test assessments/scenarios
+independently of run status; see [contract-mapping.md](contract-mapping.md),
+[context-mapping.md](context-mapping.md) and [test-coverage.md](test-coverage.md)
+for coverage reconciliation. Older manifests without test fields are unassessed.
 
 Before submitting, record `submitting` and the intended canonical hash. Save every
 returned document/run ID immediately. Skip an unchanged artifact only after its
@@ -73,6 +76,10 @@ Poll accepted runs about every 10 seconds, increasing to at most 30 seconds whil
 queued. Track a batch for five minutes unless instructed otherwise, reporting
 progress at least once per minute. Preserve terminal outcomes separately and keep
 pending IDs when tracking ends. Queued work continues on the server. Report paired
-artifacts, semantic/contract coverage and gaps, observed/unknown readiness, run
-counts and pending/errors separately. Do not query the graph or perform usefulness
-acceptance as part of bootstrap; successful ingestion is not a completeness claim.
+artifacts, semantic coverage, API/messaging coverage, representative test counts
+and gaps, observed/unknown readiness, run counts and pending/errors separately.
+Include test assessment dispositions, inspected/documented scenarios and unique
+Test Case/verification assertion counts; explain zero counts and uninspected areas.
+Authored verification links are not proof of graph application or test execution.
+Do not query the graph or perform usefulness acceptance as part of bootstrap;
+successful ingestion is not a completeness claim.
