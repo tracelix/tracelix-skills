@@ -3,16 +3,19 @@
       <img src="./images/logo.png" width="300">
    </a>
 </p>
+<p align="center">
+  <b>English</b> | <a href="./README.ru.md">Русский</a>
+</p>
 
 # Tracelix Skills
 
-Coding-agent workflows for building and using connected repository knowledge in
+Coding-agent workflows for building and using context graph in
 [Tracelix](https://tracelix.ru). Use either skill independently or use both together.
 
 | Skill | Purpose |
 | --- | --- |
 | [Tracelix Context Bootstrap](skills/tracelix-context-bootstrap/SKILL.md) | Discover repository capabilities, rules, and dependencies; generate and submit initial knowledge |
-| [Tracelix Context Awareness](skills/tracelix-context-aware/SKILL.md) | Query impact before development and publish verified knowledge and the implementation plan afterward |
+| [Tracelix Context Awareness](skills/tracelix-context-aware/SKILL.md) | Assess the impact of changes before development and publish newly acquired knowledge about the change afterward |
 
 ## Requirements
 
@@ -83,7 +86,7 @@ folders again.
 | Setting | Value |
 | --- | --- |
 | Transport | Streamable HTTP |
-| Server URL | Your operator's endpoint, for example `https://YOUR_TRACELIX_HOST/mcp` |
+| Server URL | Your operator's endpoint, for example `https://api.tracelix.ru/mcp` |
 | Authentication | Service-user token sent as `Authorization: Bearer <SERVICE_USER_TOKEN>` |
 
 Confirm that the agent can access these tools through the connection:
