@@ -1,7 +1,13 @@
+<p align="center">
+   <a href="https://tracelix.ru">
+      <img src="./images/logo.png" width="300">
+   </a>
+</p>
+
 # Tracelix Skills
 
 Coding-agent workflows for building and using connected repository knowledge in
-Tracelix. Use either skill independently or use both together.
+[Tracelix](https://tracelix.ru). Use either skill independently or use both together.
 
 | Skill | Purpose |
 | --- | --- |
